@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from src.logger.logging import logging
-from src.exception.exception import CustomException
+from src.exception.exception import customexception
 import os
 import sys
 from dataclasses import dataclass
@@ -64,7 +64,6 @@ class ModelTrainer:
 
         except Exception as e:
             logging.info('Exception occured at Model Training')
-            raise CustomException(e,sys)
+            raise customexception(e,sys)
 
-        
     
