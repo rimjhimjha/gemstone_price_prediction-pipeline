@@ -17,4 +17,8 @@ class ModelEvaluation:
         pass
 
     def initiate_model_evaluation(self, train_array, test_array):
-        pass
+        try:
+            pass
+        except Exception as e:
+            logging.info()
+            raise CustomException(e,sys)
