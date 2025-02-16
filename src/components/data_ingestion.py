@@ -21,18 +21,23 @@ class DataIngestion:
     def initiate_data_ingestion(self):  
         logging.info("Data ingestion started")
         try:
-            data_path = "experiment/dataset/sample_submission.csv"  
+            data_path = "experiment/dataset/sample_submission.csv"  # Ensure this path exists
+
             if not os.path.exists(data_path):
                 raise FileNotFoundError(f"Dataset not found at {data_path}")
 
             data = pd.read_csv(data_path)
-            logging.info("Successfully read dataset")
+            logging.info(f"Successfully read dataset with {data.shape[0]} rows and {data.shape[1]} columns")
+
+            os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path), exist_ok=True)
 
             data.to_csv(self.ingestion_config.raw_data_path, index=False)
             logging.info(f"Raw dataset saved at {self.ingestion_config.raw_data_path}")
 
             train_data, test_data = train_test_split(data, test_size=0.25, random_state=42)
-            logging.info("Train-test split completed")
+            logging.info(f"Train-test split completed: Train={train_data.shape[0]} rows, Test={test_data.shape[0]} rows")
+
+            os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
 
             train_data.to_csv(self.ingestion_config.train_data_path, index=False)
             test_data.to_csv(self.ingestion_config.test_data_path, index=False)
@@ -47,7 +52,7 @@ class DataIngestion:
                 self.ingestion_config.test_data_path
             ) 
         except Exception as e:
-            logging.info("Exception occurred during data ingestion")
+            logging.exception("Exception occurred during data ingestion")
             raise CustomException(e, sys)
 
 if __name__ == "__main__":

@@ -7,14 +7,13 @@ from src.logger.logging import logging
 from src.utils.utils import load_object
 
 class Predictpipeline:
-
     def __init__(self):
-        print("Initializing the prediction pipeline...")
+        logging.info("Initializing the prediction pipeline...")
 
     def predict(self, features):
         try:
-            preprocessor_path = os.path.join("artifact", "preprocessor.pkl")
-            model_path = os.path.join("artifact", "model.pkl")
+            preprocessor_path = os.path.join("artifacts", "preprocessor.pkl")  
+            model_path = os.path.join("artifacts", "model.pkl")  
 
             preprocessor = load_object(preprocessor_path)
             model = load_object(model_path)  
@@ -28,17 +27,7 @@ class Predictpipeline:
             raise CustomException(e, sys)
 
 class CustomData:
-    def __init__(self,
-                 carat: float,
-                 depth: float,
-                 table: float,
-                 x: float,
-                 y: float,
-                 z: float,
-                 cut: str,
-                 color: str,
-                 clarity: str):
-        
+    def __init__(self, carat: float, depth: float, table: float, x: float, y: float, z: float, cut: str, color: str, clarity: str):
         self.carat = carat
         self.depth = depth
         self.table = table

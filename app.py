@@ -28,9 +28,11 @@ def predict_datapoint():
         predict_pipeline = Predictpipeline()
         prediction = predict_pipeline.predict(final_data)
 
-        result = round(prediction[0], 2)
+        final_result = round(prediction[0], 2)
 
-        return render_template("result.html", result=result)
+        print(f"Prediction: {final_result}")  # Debugging statement
+
+        return render_template("result.html", final_result=final_result)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, debug=True)

@@ -1,1 +1,52 @@
-<h1> Dimond Price Will be {{final_result}} </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f8fafc, #dbeafe);
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        h1 {
+            color: #1e3a8a;
+            font-size: 28px;
+        }
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #16a34a;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background-color: #2563eb;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predicted Diamond Price</h1>
+        <p class="price">$ {{ final_result }}</p>
+        <a href="/" class="back-btn">Go Back</a>
+    </div>
+</body>
+</html>
