@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/RIMJHIM/Desktop/mlops/gemstone_price_prediction/mlruns/0/362ca1755c35444b86cc4b4f4af21bca/artifacts
+end_time: 1739777946025
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 362ca1755c35444b86cc4b4f4af21bca
+run_name: invincible-midge-377
+run_uuid: 362ca1755c35444b86cc4b4f4af21bca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739777940376
+status: 4
+tags: []
+user_id: RIMJHIM

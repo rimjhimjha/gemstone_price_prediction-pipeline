@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/RIMJHIM/Desktop/mlops/gemstone_price_prediction/mlruns/0/ad35b2db18024f32b5417ee9f13ac229/artifacts
+end_time: 1739778235401
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ad35b2db18024f32b5417ee9f13ac229
+run_name: resilient-gnu-500
+run_uuid: ad35b2db18024f32b5417ee9f13ac229
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739778230692
+status: 4
+tags: []
+user_id: RIMJHIM

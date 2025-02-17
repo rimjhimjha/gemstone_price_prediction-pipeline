@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/RIMJHIM/Desktop/mlops/gemstone_price_prediction/mlruns/0/60b6935ed2fc4d9d9df360656bfd3620/artifacts
+end_time: 1739778312622
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 60b6935ed2fc4d9d9df360656bfd3620
+run_name: indecisive-sheep-926
+run_uuid: 60b6935ed2fc4d9d9df360656bfd3620
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739778307836
+status: 4
+tags: []
+user_id: RIMJHIM
